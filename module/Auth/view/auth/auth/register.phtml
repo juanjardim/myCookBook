@@ -1,0 +1,75 @@
+<?php
+if(isset($this->registerForm))
+    echo "Ola Mundo";
+
+$form = $this->registerForm;
+
+$flash = $this->flashMessenger();
+?>
+<div class="modal-content sign-in">
+    <div class="modal-header">
+        <h2> Sign Up </h2>
+        <ul class="list-inline text-center">
+            <li><a href="/" data-dismiss="modal" aria-hidden="true"><i class="fa fa-home icon-round-sm"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter icon-round-sm"></i></a></li>
+            <li><a href="/user/login/facebook"><i class="fa fa-facebook icon-round-sm"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus icon-round-sm"></i></a></li>
+        </ul>
+        <p>Already Signed Up? Click <a href="/auth/login">Sign In</a> to login your account.</p>
+    </div>
+    <div class="modal-body">
+        <form action="/auth/register" method="post" id="registrationForm" style="margin-left: 15px">
+            <div class="form-group">
+                <div class="input-group margin-bottom-20">
+                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                    <input name="username" type="text" value="" class="form-control" placeholder="Username" autocomplete="off" aria-required="true" aria-invalid="true" autofocus>
+                </div>
+                <?php if($this->formElementerrors($form->get('username'))): ?>
+                    <small data-bv-validator="notEmpty" data-bv-validator-for="identity" class="help-block" style="margin-left: 40px;"><?php echo implode(" ", $form->get('username')->getMessages());?></small>
+                <?php endif;?>
+            </div>
+            <div class="form-group">
+                <div class="input-group margin-bottom-20">
+                    <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                    <input type="email" name="email" class="form-control" placeholder="E-mail" aria-required="true" aria-invalid="true">
+                </div>
+                <?php if($this->formElementerrors($form->get('email'))): ?>
+                    <small data-bv-validator="notEmpty" data-bv-validator-for="identity" class="help-block" style="margin-left: 40px;"><?php echo implode(" ", $form->get('email')->getMessages());?></small>
+                <?php endif;?>
+            </div>
+            <div class="form-group">
+                <div class="input-group margin-bottom-20">
+                    <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                    <input type="password" name="password" class="form-control" placeholder="Password" autocomplete="off" aria-required="true" aria-invalid="true">
+                </div>
+                <?php if($this->formElementerrors($form->get('password'))): ?>
+                    <small data-bv-validator="notEmpty" data-bv-validator-for="identity" class="help-block" style="margin-left: 40px;"><?php echo implode(" ", $form->get('password')->getMessages());?></small>
+                <?php endif;?>
+            </div>
+            <div class="form-group">
+                <div class="input-group margin-bottom-20">
+                    <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                    <input type="password" name="passwordVerify" class="form-control" placeholder="Retype password" autocomplete="off" aria-required="true" aria-invalid="true">
+                </div>
+                <?php if($this->formElementerrors($form->get('passwordVerify'))): ?>
+                    <small data-bv-validator="notEmpty" data-bv-validator-for="identity" class="help-block" style="margin-left: 40px;"><?php echo implode(" ", $form->get('passwordVerify')->getMessages());?></small>
+                <?php endif;?>
+            </div>
+            <button type="submit" value="Submit" id="registerSubmitBtn" class="btn btn-success btn-block btn-lg submit-form margin-bottom-20" form="registrationForm" style="width: 93%;">Register</button>
+
+        </form>
+        <?php if($flash->hasMessages()):
+            $currentMsgs = $flash->getMessages();
+            $flash->clearMessages();  ?>
+            <div class="alert alert-danger">
+                <button class="close" data-close="alert"></button>
+                <strong>Error!</strong>
+                <?php foreach($currentMsgs as $msg):
+                    echo $msg;
+                endforeach;?>
+            </div>
+
+        <?php endif; ?>
+    </div>
+</div><!-- /.modal-content -->
+</div>

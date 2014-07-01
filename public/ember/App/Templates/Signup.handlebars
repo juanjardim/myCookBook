@@ -1,0 +1,38 @@
+<script type="text/x-handlebars" data-template-name="sign-up">
+	{{#view MainView}}
+	<div class="modal-content sign-up">
+		<div class="modal-header">
+			<h2> Sign Up </h2>
+			<ul class="list-inline text-center">
+				<li><a href="#" data-dismiss="modal" aria-hidden="true"><i class="fa fa-home icon-round-sm"></i></a></li>
+				<li><a href="#"><i class="fa fa-twitter icon-round-sm"></i></a></li>
+				<li><a href="/user/login/facebook"><i class="fa fa-facebook icon-round-sm"></i></a></li>
+				<li><a href="#"><i class="fa fa-google-plus icon-round-sm"></i></a></li>
+			</ul>
+			<p>Already Signed Up? Click <a href="#" {{action logIn target="view"}}>Sign In</a> to login your account.</p>
+		</div>
+		<div class="modal-body">
+			<div class="input-group margin-bottom-20">
+				<span class="input-group-addon"><i class="fa fa-user"></i></span>
+				<input type="text" class="form-control" placeholder="Username">
+			</div>
+			<div class="input-group margin-bottom-20">
+				<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+				<input type="email" class="form-control" placeholder="Email">
+			</div>
+			<div class="input-group margin-bottom-20">
+				<span class="input-group-addon"><i class="fa fa-lock"></i></span>
+				<input type="text" class="form-control" placeholder="Password">
+			</div>
+			<div class="input-group margin-bottom-20">
+				<span class="input-group-addon"><i class="fa fa-lock"></i></span>
+				<input type="text" class="form-control" placeholder="Confirm Password">
+			</div>
+
+		</div>
+		<div class="modal-footer">
+		<a href="#" class="btn btn-success btn-block btn-lg">Register</a>
+		</div>
+	</div><!-- /.modal-content -->
+	{{/view}}
+</script>

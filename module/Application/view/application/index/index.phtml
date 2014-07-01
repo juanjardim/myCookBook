@@ -1,0 +1,178 @@
+<div class="division-container" id="home" style="margin-top: 74px">
+  <div class="wrap">
+    <div class="container">
+      <div class="row">
+        <h1 class="animated slideInDown"><span>My Cookbook</span></h1>
+        <div class="col-md-6 col-sm-12">
+          <div class="list">
+            <ul>
+              <li class="animated slideInLeft first"><span class="li-bg">
+                <i class="fa fa-pencil-square-o"></i>
+                <span>Create Dishes.</span></span></li>
+                <li class="animated slideInLeft third"><span class="li-bg">
+                  <i class="fa fa-share-square-o"></i>
+                  <span>Share With Your Friends.</span></span>
+                </li>
+                <li class="animated slideInLeft second"><span class="li-bg">
+                  <i class="fa fa-thumbs-o-up"></i>
+                  <span>Get Feedback.</span></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          {{#view MainView}}
+          <div class="login-signup col-md-6 col-sm-12">
+            <div class="animated slideInRight col-xs-6 col-md-6">
+              <a href="/auth/register" class="btn btn-success btn-block btn-lg">Sign Up</a>
+              <a href="/auth/login" class="btn btn-default btn-block btn-lg">Sign In</a>
+            </div>
+          </div>
+          {{/view}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="division-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="headline"><h2>Welcome</h2></div>
+          <img src="/img/chocolateCake.jpg" class="img-chocolate-cake img-responsive" alt="About"/>
+          <p id="welcome-message">If you like to cook or you want to learn new recipes this site is for you. Here, you can save, share and get feedback of your recipes from your friends and other users. You can also search for news recipes and make at your home this splendid dishes.
+            <br /><br /><br />
+            Show your skills, follow the recipes, take photos and contribute to making this site the primary site of gourmet recipes. Become a master cook.</p>
+          </div>
+          <div class="col-md-4">
+            <div class="headline"><h2>Last Updates</h2></div>
+            <div class="tab-container">
+             <ul class="nav nav-tabs">
+               <li class="active"><a href="#new-recipes" data-toggle="tab">New Recipes</a></li>
+               <li><a href="#top" data-toggle="tab">Top Recipes</a></li>
+               <li><a href="#comments" data-toggle="tab">Comments</a></li>
+             </ul>
+             <div class="tab-content">
+              <div class="tab-pane active" id="new-recipes">
+                <div class="media">
+                  <a class="pull-left" href="#">
+                    <img class="media-object" src="img/cake.jpg" alt="Chocolate Cake"/>
+                  </a>
+                  <div class="media-body">
+                    <a href="#">Chocolate Cake</a> 
+                    <span class="text-muted time">20 minutes ago</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id ipsum varius...</p>
+                  </div>
+                </div>
+                <div class="media">
+                  <a class="pull-left" href="#">
+                    <img class="media-object" src="img/salad.jpg" alt="Chocolate Cake">
+                  </a>
+                  <div class="media-body">
+                    <a href="#">Salad</a> 
+                    <span class="text-muted time">30 minutes ago</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id ipsum varius...</p>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="top">
+              </div>
+              <div class="tab-pane" id="comments">
+                <div class="media">
+                  <a class="pull-left" href="#">
+                    <i class="glyphicon glyphicon-user avatar"></i>
+                  </a>
+                  <div class="media-body"><a href="#">Alex Smith</a> 
+                    <span class="text-muted time">20 minutes ago</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id ipsum varius...</p>
+                  </div>
+                </div>
+                <div class="media">
+                  <a class="pull-left" href="#">
+                    <i class="glyphicon glyphicon-user avatar"></i>
+                  </a>
+                  <div class="media-body">
+                    <a href="#">Juan Jardim</a> 
+                    <span class="text-muted time">20 minutes ago</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id ipsum varius...</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="division-container division-container-category" id="categories">
+    <div class="container">
+      <div class="headline"><h2>Categories</h2></div>
+      <ul class="row categories-grid">
+        <li class="col-md-3 col-sm-6 col-xs-12 category">
+          <a href="#">
+            <img class="img-responsive" src="/img/appetizers.jpg" alt="">
+            <span class="category-cover">
+              <span>Appetizers</span>
+            </span>
+          </a>
+        </li>
+        <li class="col-md-3 col-sm-6 col-xs-12 category">
+          <a href="#">
+            <img class="img-responsive" src="/img/beef.jpg" alt="">
+            <span class="category-cover">
+              <span>Beef</span>
+            </span>
+          </a>
+        </li>
+        <li class="col-md-3 col-sm-6 col-xs-12 category">
+          <a href="#">
+            <img class="img-responsive" src="/img/beverages.jpg" alt="">
+            <span class="category-cover">
+              <span>Beverages</span>
+            </span>
+          </a>
+        </li>
+        <li class="col-md-3 col-sm-6 col-xs-12 category">
+          <a href="#">
+            <img class="img-responsive" src="/img/breads.jpg" alt="">
+            <span class="category-cover">
+              <span>Breads</span>
+            </span>
+          </a>
+        </li>
+        <li class="col-md-3 col-sm-6 col-xs-12 category">
+          <a href="#">
+            <img class="img-responsive" src="/img/desserts.jpg" alt="">
+            <span class="category-cover">
+              <span>Desserts</span>
+            </span>
+          </a>
+        </li>
+        <li class="col-md-3 col-sm-6 col-xs-12 category">
+          <a href="#">
+            <img class="img-responsive" src="/img/pork.jpg" alt="">
+            <span class="category-cover">
+              <span>Pork</span>
+            </span>
+          </a>
+        </li>
+        <li class="col-md-3 col-sm-6 col-xs-12 category">
+          <a href="#">
+            <img class="img-responsive" src="/img/salads.jpg" alt="">
+            <span class="category-cover">
+              <span>Salads</span>
+            </span>
+          </a>
+        </li>
+        <li class="col-md-3 col-sm-6 col-xs-12 category" style="display: inline-block; opacity: 1;">
+          <a href="#">
+            <img class="img-responsive" src="/img/soups.jpg" alt="">
+            <span class="category-cover">
+              <span>Soups</span>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div> <!-- /container -->
+

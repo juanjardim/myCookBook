@@ -1,0 +1,92 @@
+<?php echo $this->doctype(); ?>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <?php echo $this->headTitle('My Cookbook')->setSeparator(' - ')->setAutoEscape(false) ?>
+
+    <?php echo $this->headMeta()
+        ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+        ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+    ?>
+    <?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'))
+        ->prependStylesheet($this->basePath() . '/css/style.css')
+        ->prependStylesheet($this->basePath() . '/css/animate.css')
+        ->prependStylesheet($this->basePath() . '/font-awesome/css/font-awesome.min.css')
+        ->prependStylesheet('http://fonts.googleapis.com/css?family=Lato:100,300,400')
+        ->prependStylesheet($this->basePath() . '/bootstrap/css/bootstrap-theme.min.css')
+        ->prependStylesheet($this->basePath() . '/bootstrap/css/bootstrap.min.css')
+        ->prependStylesheet($this->basePath() . '/bootstrapvalidator/css/bootstrapValidator.min.css')?>
+</head>
+<body class="modal-open">
+<nav class="navbar navbar-default navbar-top header-navigation navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">My Cookbook</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right" style="">
+                <li class="current"><a href="#home">Home</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+<div class="division-container" id="home" style="margin-top: 74px">
+    <div class="wrap" style="height: 505px;">
+        <div class="container">
+            <div class="row">
+                <h1 class="animated slideInDown"><span>My Cookbook</span></h1>
+                <div class="col-md-6 col-sm-12">
+                    <div class="list">
+                        <ul>
+                            <li class="animated slideInLeft first"><span class="li-bg"><i class="fa fa-pencil-square-o"></i>
+                <span>Create Dishes.</span></span></li>
+                            <li class="animated slideInLeft third"><span class="li-bg"><i class="fa fa-share-square-o"></i>
+                  <span>Share With Your Friends.</span></span>
+                            </li>
+                            <li class="animated slideInLeft second"><span class="li-bg"><i class="fa fa-thumbs-o-up"></i>
+                  <span>Get Feedback.</span></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="modal fade in" id="modalView" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false" style="display: block;">
+        <div class="modal-dialog">
+            <?php echo $this->content; ?>
+        </div><!-- /.modal-dialog -->
+    </div>
+</div>
+
+
+<?php echo $this->headScript()
+    ->prependFile($this->basePath() . '/js/user.js')
+    ->prependFile($this->basePath() . '/bootstrapvalidator/js/bootstrapvalidator.min.js')
+    ->prependFile($this->basePath() . '/bootstrap/js/bootstrap.min.js')
+    ->prependFile($this->basePath() . '/js/jquery.min.js')
+
+
+    ->prependFile($this->basePath() . '/js/html5shiv.js',   'text/javascript', array('conditional' => 'lt IE 9',))
+; ?>
+
+<div class="modal-backdrop fade in"></div>
+
+
+<div class="navbar-fixed-bottom">
+    <?php echo $this->partial('footer'); ?>
+</div>
+
+
+</body>
+</html>
